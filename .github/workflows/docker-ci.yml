@@ -36,7 +36,7 @@ jobs:
 
       #  Security Scan (Trivy)
       - name: Scan Docker Image (Trivy)
-        uses: aquasecurity/trivy-action@master
+        uses: aquasecurity/trivy-action@main
         with:
           image-ref: ${{ secrets.DOCKER_USERNAME }}/${{ inputs.image_name }}:${{ inputs.tag }}
           severity: CRITICAL
